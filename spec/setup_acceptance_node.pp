@@ -1,4 +1,4 @@
-if $facts['os']['name'] == 'CentOS' {
+if $facts['os']['name'] == ['CentOS', 'AlmaLinux'] {
   package { 'epel-release':
     ensure => installed,
     before => Package['dhcping'],
